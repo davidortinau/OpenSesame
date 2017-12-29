@@ -210,6 +210,7 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainApplication.cs" />
+    <Compile Include="Renderers\NakedButtonRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -234,6 +235,9 @@
       <Project>{040FFD1B-133C-45FF-BD93-236B0BB1FB04}</Project>
       <Name>MyQNET</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Renderers\" />
   </ItemGroup>
   <Import Project="..\OpenSesame\OpenSesame.projitems" Label="Shared" Condition="Exists('..\OpenSesame\OpenSesame.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

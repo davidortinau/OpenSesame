@@ -21,13 +21,18 @@
 		    <RowDefinition Height="Auto"></RowDefinition>
 		</Grid.RowDefinitions>
 
-        <ffimageloadingsvg:SvgCachedImage Grid.Row="0" 
-        WidthRequest="200" HeightRequest="200" 
-        Source="robot_legs.svg"/>  
+        <ffimageloadingsvg:SvgCachedImage 
+            Grid.Row="0" 
+            WidthRequest="200" 
+            HeightRequest="200" 
+            Source="robot_legs.svg"/>  
 
-        <ffimageloadingsvg:SvgCachedImage x:Name="BotBody" Grid.Row="0" 
-        WidthRequest="200" HeightRequest="200" 
-        Source="robot_body.svg"/>  
+        <ffimageloadingsvg:SvgCachedImage 
+            x:Name="BotBody" 
+            Grid.Row="0" 
+            WidthRequest="200" 
+            HeightRequest="200" 
+            Source="robot_body.svg"/>  
 
 	    <StackLayout Grid.Row="1">
 		    <Label x:Name="DoorStateLabel" HorizontalOptions="Center"></Label>

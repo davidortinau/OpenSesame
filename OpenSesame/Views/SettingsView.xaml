@@ -14,24 +14,47 @@
         </Grid.RowDefinitions>
     
         <Button Text="Close" 
+            StyleClass="SecondaryButton"
             FontSize="20" 
-            BorderWidth="0"
-            BackgroundColor="Transparent"
             HorizontalOptions="Start" 
             Command="{Binding BackCommand}" 
-            Grid.Row="0" 
-            StyleClass="SecondaryButton"/>
+            Grid.Row="0">
+            <Button.FontSize>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="Android" Value="14"/>
+                </OnPlatform>
+            </Button.FontSize>
+
+        </Button>
         
         <ScrollView Grid.Row="1">
             <StackLayout Spacing="10">
                 <Label Text="Cognitive Services Endpoint"/>
-                <Entry Text="{Binding CognitiveServicesEndpoint}"/>
+                <Entry Text="{Binding CognitiveServicesEndpoint}">
+                    <Entry.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="12"/>
+                        </OnPlatform>
+                    </Entry.FontSize>
+                </Entry>
                 
                 <Label Text="Bing Speech Endpoint"/>
-                <Entry Text="{Binding BingSpeechRecognitionEndpoint}"/>
+                <Entry Text="{Binding BingSpeechRecognitionEndpoint}">
+                    <Entry.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="12"/>
+                        </OnPlatform>
+                    </Entry.FontSize>
+                </Entry>
 
                 <Label Margin="10,0,0,0" Text="Bing Speech API Key"/>
-                <Entry Text="{Binding BingSpeechAPIKey}"/>
+                <Entry Text="{Binding BingSpeechAPIKey}">
+                    <Entry.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="12"/>
+                        </OnPlatform>
+                    </Entry.FontSize>
+                </Entry>
 
                 <Button Margin="10,0,0,0" Text="Save" Command="{Binding SaveCommand}"/>
                 <Button Text="Logout" Command="{Binding LogoutCommand}" StyleClass="SecondaryButton"/>

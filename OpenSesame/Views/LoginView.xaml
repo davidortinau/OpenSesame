@@ -31,7 +31,7 @@
                 <Entry Placeholder="Username" Text="{Binding Username}"/>
                 <Entry Placeholder="Password" IsPassword="true" Text="{Binding Password}"/>
                 <Button Text="Login" Command="{Binding LoginCommand}"/>
-                <Button Text="Settings" Command="{Binding SettingsCommand}" StyleClass="SecondaryButton"/> 
+                <Button Text="Settings" Command="{Binding SettingsCommand}" StyleClass="SecondaryButton" /> 
             </StackLayout>
         </Grid>
     </ScrollView>
