@@ -4,6 +4,7 @@ using Android.Content.PM;
 using Android.OS;
 using FFImageLoading.Forms.Droid;
 using FFImageLoading.Svg.Forms;
+using Plugin.Permissions;
 
 namespace OpenSesame.Droid
 {
@@ -23,6 +24,11 @@ namespace OpenSesame.Droid
 
 
 			LoadApplication(new App());
+		}
+
+		public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
+		{
+			PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 		}
 	}
 }

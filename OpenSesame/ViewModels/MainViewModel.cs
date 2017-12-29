@@ -17,12 +17,14 @@ namespace OpenSesame.ViewModels
 {
 	public class MainViewModel : ReactiveObject, ISupportsActivation
 	{
-
 		readonly ViewModelActivator activator;
+
 		public ViewModelActivator Activator => this.activator;
 
 		IMyQService myQ;
+
 		string doorStateDescription = DoorState.Unknown.ToString();
+
 		DoorState doorState;
 
 		public INavigation Nav { get; set; }
@@ -59,11 +61,14 @@ namespace OpenSesame.ViewModels
 		}
 
 		readonly ObservableAsPropertyHelper<bool> canToggleDoor;
+
 		public bool CanToggleDoor
 		{
 			get { return canToggleDoor.Value; }
 		}
+
 		public int IsActiveCount { get; protected set; }
+
 		public MainViewModel()
 		{
 			this.activator = new ViewModelActivator();
@@ -144,28 +149,6 @@ namespace OpenSesame.ViewModels
 						OnGetDevices();
 					}
 				});
-		}
-
-		bool isRecording;
-		bool isProcessing;
-
-		public string VoiceButtonTitle
-		{
-			get
-			{
-				if (isRecording)
-				{
-					return "Recording";
-				}
-				else if (isProcessing)
-				{
-					return "Processing";
-				}
-				else
-				{
-					return "Voice Command";
-				}
-			}
 		}
 
 		async Task ProcessSpeechCommand(string phrase)

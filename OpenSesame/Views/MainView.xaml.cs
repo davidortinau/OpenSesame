@@ -66,10 +66,6 @@ namespace OpenSesame.Views
 												c => c.OpenCloseButton)
 						.DisposeWith(disposables);
 
-				this.Bind(ViewModel, vm => vm.VoiceButtonTitle,
-								 c => c.VoiceButton.Text)
-						.DisposeWith(disposables);
-
 				this.BindCommand(ViewModel, vm => vm.SettingsCommand,
 												c => c.SettingsBtn)
 						.DisposeWith(disposables);
@@ -98,6 +94,8 @@ namespace OpenSesame.Views
 				isRecording = !isRecording;
 				if (!isRecording)
 				{
+					((Button)sender).Text = "Processing";
+
 					var speechResult = await bingSpeechService.RecognizeSpeechAsync(Constants.AudioFilename);
 					Debug.WriteLine("Name: " + speechResult.Name);
 					Debug.WriteLine("Confidence: " + speechResult.Confidence);
