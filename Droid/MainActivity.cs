@@ -7,6 +7,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using FFImageLoading.Forms.Droid;
+using FFImageLoading.Svg.Forms;
 
 namespace OpenSesame.Droid
 {
@@ -20,6 +22,8 @@ namespace OpenSesame.Droid
 
 			base.OnCreate(bundle);
 
+			CachedImageRenderer.Init(false);
+			var ignore = typeof(SvgCachedImage);
 			global::Xamarin.Forms.Forms.Init(this, bundle);
 
 
