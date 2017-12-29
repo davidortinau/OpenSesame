@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="OpenSesame.Views.LoginView">
+		<ContentPage.Resources>
+        <StyleSheet Source="../Assets/styles.css"/>  
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="1">
+                <Frame CornerRadius="80" Padding="0" 
+                    Margin="20"
+                    HorizontalOptions="Center"
+                    IsClippedToBounds="true"
+                    BackgroundColor="White" 
+                    WidthRequest="160"
+                    HeightRequest="160">
+                    <Image 
+                    WidthRequest="60"
+                        HeightRequest="60"
+                        Aspect="AspectFill"
+                    Source="{Binding ProfilePhotoUrl}"/>
+                </Frame>
+                <Entry Placeholder="Username" Text="{Binding Username}"/>
+                <Entry Placeholder="Password" IsPassword="true" Text="{Binding Password}"/>
+                <Button Text="Login" Command="{Binding LoginCommand}"/>
+                <Button Text="Settings" Command="{Binding SettingsCommand}" StyleClass="SecondaryButton"/> 
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

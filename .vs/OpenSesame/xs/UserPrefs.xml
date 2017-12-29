@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{3D30F20E-36B1-41A4-B86B-7097F05266AC}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OpenSesame/OpenSesamePage.xaml.cs">
+    <Files>
+      <File FileName="MyQNET/MyQService.cs" Line="9" Column="3" />
+      <File FileName="MyQNET/MyQNET.csproj" Line="1" Column="1" />
+      <File FileName="OpenSesame.Service/MyQService.cs" Line="18" Column="20" />
+      <File FileName="OpenSesame/OpenSesamePage.xaml" Line="7" Column="1" />
+      <File FileName="OpenSesame/OpenSesamePage.xaml.cs" Line="19" Column="2" />
+      <File FileName="OpenSesame.PCL/MyQService.cs" Line="7" Column="25" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/work/OpenSesame/OpenSesame.Service/MyQService.cs" relfile="OpenSesame.Service/MyQService.cs" line="22" column="1" />
+      <Breakpoint file="/work/OpenSesame/OpenSesame.Service/MyQService.cs" relfile="OpenSesame.Service/MyQService.cs" line="35" column="29" />
+      <Breakpoint file="/work/OpenSesame/OpenSesame.Service/MyQService.cs" relfile="OpenSesame.Service/MyQService.cs" line="28" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.OpenSesame.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.F1CA338C-897C-496C-9BE7-CC0096366E8D">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.OpenSesame.iOS>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <DisabledProjects>
+    <String>MyQNET/MyQNET.csproj</String>
+    <String>OpenSesame.Service/OpenSesame.Service.csproj</String>
+  </DisabledProjects>
+</Properties>

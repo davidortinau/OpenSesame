@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:ReactiveContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:ui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+    xmlns:vms="clr-namespace:OpenSesame.ViewModels"
+    x:TypeArguments="vms:MainViewModel"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="OpenSesame.Views.MainView">
+	<ContentPage.Resources>
+        <StyleSheet Source="../Assets/styles.css"/>  
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="SettingsBtn" Order="Primary" Text="Settings" Priority="0" />
+    </ContentPage.ToolbarItems>
+   
+    <Grid>
+	    <Grid.RowDefinitions>
+		    <RowDefinition Height="*"></RowDefinition>
+		    <RowDefinition Height="Auto"></RowDefinition>
+		    <RowDefinition Height="Auto"></RowDefinition>
+		</Grid.RowDefinitions>
+
+        <ffimageloadingsvg:SvgCachedImage Grid.Row="0" 
+        WidthRequest="200" HeightRequest="200" 
+        Source="robot_legs.svg"/>  
+
+        <ffimageloadingsvg:SvgCachedImage x:Name="BotBody" Grid.Row="0" 
+        WidthRequest="200" HeightRequest="200" 
+        Source="robot_body.svg"/>  
+
+	    <StackLayout Grid.Row="1">
+		    <Label x:Name="DoorStateLabel" HorizontalOptions="Center"></Label>
+	    
+		    <Button x:Name="RefreshButton" Text="Refresh" 
+		            HorizontalOptions="Fill"  />    
+		    
+		    <Button x:Name="OpenCloseButton" 
+		            HorizontalOptions="Fill"></Button>
+
+            <Button x:Name="VoiceButton" 
+                HorizontalOptions="Fill"
+                Clicked="OnRecognizeSpeechButtonClicked"/>
+	    </StackLayout>
+	    
+    </Grid>
+</ui:ReactiveContentPage>

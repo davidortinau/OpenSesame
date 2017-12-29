@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    Title="Settings"
+    x:Class="OpenSesame.Views.SettingsView">
+	<ContentPage.Resources>
+        <StyleSheet Source="../Assets/styles.css"/>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+    
+        <Button Text="Close" 
+            FontSize="20" 
+            BorderWidth="0"
+            BackgroundColor="Transparent"
+            HorizontalOptions="Start" 
+            Command="{Binding BackCommand}" 
+            Grid.Row="0" 
+            StyleClass="SecondaryButton"/>
+        
+        <ScrollView Grid.Row="1">
+            <StackLayout Spacing="10">
+                <Label Text="Cognitive Services Endpoint"/>
+                <Entry Text="{Binding CognitiveServicesEndpoint}"/>
+                
+                <Label Text="Bing Speech Endpoint"/>
+                <Entry Text="{Binding BingSpeechRecognitionEndpoint}"/>
+
+                <Label Margin="10,0,0,0" Text="Bing Speech API Key"/>
+                <Entry Text="{Binding BingSpeechAPIKey}"/>
+
+                <Button Margin="10,0,0,0" Text="Save" Command="{Binding SaveCommand}"/>
+                <Button Text="Logout" Command="{Binding LogoutCommand}" StyleClass="SecondaryButton"/>
+            </StackLayout>
+
+        </ScrollView>
+    </Grid>
+</ContentPage>

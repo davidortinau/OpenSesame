@@ -1,0 +1,26 @@
+﻿/*
+COLORS
+chartruese (green): #1c4508
+mimosa (light tan): #ffc363
+chili pepper (red): #e10032
+puce (brown): #554a35
+*/
+
+^ContentPage {
+    background-color: #554a35;
+    padding: 20;
+}
+
+label { color: #ffc363; }
+
+button {
+    background-color: #e10032;
+    color: white;
+}
+
+^Entry { height: 40; }
+
+.SecondaryButton {
+    background-color: transparent;
+    color: white;
+}
