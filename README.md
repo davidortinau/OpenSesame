@@ -18,6 +18,8 @@ Talking to the MyQ API. Supported actions:
 - GetDeviceState
 - SetDeviceState (open and close)
 
+> If you want to use the MyQ API and (obviously) have a compatible garage door openeers, setup a Chamberlain or LiftMaster account through their website or app.
+
 ## MyQ Resources
 
 https://unofficialliftmastermyq.docs.apiary.io/#
@@ -29,6 +31,8 @@ https://www.npmjs.com/package/myq-api
 https://developer.xamarin.com/guides/xamarin-forms/cloud-services/cognitive-services/speech-recognition/
 
 https://azure.microsoft.com/en-us/services/cognitive-services/
+
+> API Key required. Be sure to get a key from the link above and add it on the Settings view of the app. 
 
 ## Other
 
